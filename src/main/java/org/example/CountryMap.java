@@ -1,32 +1,17 @@
 package org.example;
 
+import java.util.HashMap;
+
 public class CountryMap {
+    private HashMap<String, Integer> countryPopulations = new HashMap<>();
 
-    private String country;
-
-    private int population;
-
-    public String getCountry() {
-        return country;
+    public void CountryMap (){
+        populate();
     }
 
-    public void setCountry(String country) {
-        this.country = country;
+    private void populate(){
+        countryPopulations.put("UK",500);
+        countryPopulations.put("US",5000);
+
     }
-
-    public int getPopulation() {
-        return population;
-    }
-
-    public void setPopulation(int population) {
-        this.population = population;
-    }
-
-
-    @Override
-    public String toString(){
-        return country + " has a population " + job + " and works at " + placeOfWork + " in " + city;
-    }
-
-
 }
