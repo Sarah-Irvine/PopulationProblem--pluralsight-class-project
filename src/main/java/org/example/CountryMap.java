@@ -23,6 +23,11 @@ public class CountryMap {
         System.out.println(countryPopulations.size());
     }
 
+    public void addCountry(String name, int population){
+        Integer intObj = Integer.valueOf(population);
+        countries.put(name, new Country(name,intObj));
+    }
+
 }
 
 /**
