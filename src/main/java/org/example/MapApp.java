@@ -9,7 +9,6 @@ public class MapApp {
     public static void main(String[] args) {
         CountryMap country = new CountryMap();
 
-
         boolean continueMaps=true;
         do{
             if(myScanner.equalsIgnoreCase("a")){
@@ -54,7 +53,8 @@ public class MapApp {
         }
         while(continueMaps);
 
+
     }
-
-
 }
+
+
