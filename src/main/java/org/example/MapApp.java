@@ -14,6 +14,7 @@ public class MapApp {
         boolean continueMaps=true;
 
         do{
+
             System.out.println("Press A to show the country with the largest population");
             System.out.println("Press B to show the country with the smallest population");
             System.out.println("Press C to show a list of countries in order from lowest population to highest population");
