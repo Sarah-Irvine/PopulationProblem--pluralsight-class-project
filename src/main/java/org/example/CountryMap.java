@@ -1,18 +1,17 @@
 package org.example;
 
 import java.util.HashMap;
-import java.util.TreeMap;
 import java.util.TreeSet;
 
 public class CountryMap {
     private HashMap<String, Country> countries = new HashMap<>();
     private TreeSet<Country> countryPopulations = new TreeSet<>();
 
-    public CountryMap (){
+    public CountryMap() {
         populate();
     }
 
-    private void populate(){
+    private void populate() {
 
         countries.put("India", new Country("India", 1428627663) );
         countries.put("China", new Country("China", 1425671352));
@@ -25,6 +24,7 @@ public class CountryMap {
         countries.put("Mexico", new Country("Mexico", 128455567));
         countries.put("UK", new Country("Uk", 67736802));
         countries.put("Finland", new Country("Finland", 5545475));
+
 
     }
 
@@ -57,11 +57,22 @@ public class CountryMap {
         n.printAllCountries();
     }
 
+    public void removeCountry(String removeCountryName) {
+        if (countries.containsKey(removeCountryName)) {
+            countries.remove(removeCountryName);
+            System.out.println(removeCountryName + " successfully removed from the HashMap");
+        } else {
+            System.out.println("No country found");
+        }
+    }
+    public void addCountry(String name, int population){
+        Integer intObj = Integer.valueOf(population);
+        countries.put(name, new Country(name,intObj));
+    }
+
 }
 
-/**
- * https://beginnersbook.com/2014/07/how-to-sort-a-treemap-by-value-in-java/
- */
+
 
 
 
