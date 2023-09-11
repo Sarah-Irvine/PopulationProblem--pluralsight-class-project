@@ -25,7 +25,7 @@ public class CountryMap {
         countries.put("UK", new Country("Uk", 67736802));
         countries.put("Finland", new Country("Finland", 5545475));
 
-
+        sortCountries();
     }
 
     public String largestCountry(){
@@ -60,6 +60,8 @@ public class CountryMap {
     public void removeCountry(String removeCountryName) {
         if (countries.containsKey(removeCountryName)) {
             countries.remove(removeCountryName);
+            countryPopulations = new TreeSet<Country>();
+            sortCountries();
             System.out.println(removeCountryName + " successfully removed from the HashMap");
         } else {
             System.out.println("No country found");
@@ -68,6 +70,7 @@ public class CountryMap {
     public void addCountry(String name, int population){
         Integer intObj = Integer.valueOf(population);
         countries.put(name, new Country(name,intObj));
+        this.sortCountries();
     }
 
 }
