@@ -6,7 +6,7 @@ import java.util.TreeSet;
 
 public class CountryMap {
     private HashMap<String, Country> countries = new HashMap<>();
-    public TreeSet<Country> countryPopulations = new TreeSet<>(countries.values());
+    private TreeSet<Country> countryPopulations = new TreeSet<>();
 
     public CountryMap (){
         populate();
@@ -14,13 +14,47 @@ public class CountryMap {
 
     private void populate(){
 
-        countries.put("uk", new Country("uk", 500) );
-        countries.put("US", new Country("US", 5000));
-        countries.put("GER", new Country("GER", 670));
-        countries.put("GB", new Country("GB", 5034));
+        countries.put("India", new Country("India", 1428627663) );
+        countries.put("China", new Country("China", 1425671352));
+        countries.put("USA", new Country("USA", 339996563));
+        countries.put("Italy", new Country("Italy", 58870762));
+        countries.put("Spain", new Country("Russia", 47519628));
+        countries.put("Portugal", new Country("Portugal", 10247605));
+        countries.put("Brazil", new Country("Brazil", 216422446));
+        countries.put("Russia", new Country("Russia", 144444359));
+        countries.put("Mexico", new Country("Mexico", 128455567));
+        countries.put("UK", new Country("Uk", 67736802));
+        countries.put("Finland", new Country("Finland", 5545475));
 
-        System.out.println(countries.values());
-        System.out.println(countryPopulations.size());
+    }
+
+    public String largestCountry(){
+        return countryPopulations.last().toString();
+    }
+
+    public String smallestCountry(){
+        return countryPopulations.first().toString();
+    }
+
+    public void printAllCountries(){
+
+        for (Country c : countryPopulations){
+            System.out.println(c.getName());
+        }
+    }
+
+    public void sortCountries(){
+        countryPopulations.addAll(countries.values());
+    }
+
+    /**
+     * just for testing
+     * @param args
+     */
+    public static void main(String[] args){
+        CountryMap n = new CountryMap();
+        n.sortCountries();
+        n.printAllCountries();
     }
 
 }

@@ -34,6 +34,6 @@ public class Country implements Comparable{
     }
 
     public String toString(){
-        return this.name;
+        return this.name + " with population of " + this.population;
     }
 }
