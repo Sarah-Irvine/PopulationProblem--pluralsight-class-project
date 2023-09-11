@@ -1,9 +1,14 @@
 package org.example;
 
-import java.util.Scanner
+
+import java.util.Scanner;
+
+import java.util.Iterator;
+
 public class MapApp {
     public static void main(String[] args) {
         CountryMap country = new CountryMap();
+
 
         boolean continueMaps=true;
         do{
@@ -48,6 +53,7 @@ public class MapApp {
 
         }
         while(continueMaps);
+
     }
 
 
