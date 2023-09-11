@@ -7,22 +7,17 @@ import java.util.Iterator;
 public class MapApp {
     public static void main(String[] args) {
 
-
-        Scanner myScanner = new Scanner(System.in);
-
-        System.out.println("Press A to show the country with the largest population");
-        System.out.println("Press B to show the country with the smallest population");
-        System.out.println("Press C to show a list of countries in order from lowest population to highest population");
-        System.out.println("Press D to add a country");
-        System.out.println("Press E to remove a country");
-        System.out.println("Press F to exit");
-
-        String choice = myScanner.nextLine();
-
-
         CountryMap country = new CountryMap();
         boolean continueMaps=true;
         do{
+            Scanner myScanner = new Scanner(System.in);
+            System.out.println("Press A to show the country with the largest population");
+            System.out.println("Press B to show the country with the smallest population");
+            System.out.println("Press C to show a list of countries in order from lowest population to highest population");
+            System.out.println("Press D to add a country");
+            System.out.println("Press E to remove a country");
+            System.out.println("Press F to exit");
+            String choice = myScanner.nextLine();
             if(choice.equalsIgnoreCase("a")){
                 System.out.println("You have chosen to view the country with the largest population!");
                 System.out.println("The country with the largest population is " + country.largestCountry());
