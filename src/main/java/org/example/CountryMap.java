@@ -59,8 +59,8 @@ public class CountryMap {
 
     public void removeCountry(String removeCountryName) {
         if (countries.containsKey(removeCountryName)) {
+            countryPopulations.remove(countries.get(removeCountryName));
             countries.remove(removeCountryName);
-            countryPopulations = new TreeSet<Country>();
             sortCountries();
             System.out.println(removeCountryName + " successfully removed from the HashMap");
         } else {
